@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function() {
     if (downloadIcon) {
         downloadIcon.addEventListener('click', function() {
             const link = document.createElement('a');
-            link.href = 'example.txt';
+            link.href = 'media/example.txt';
             link.download = 'example.txt';
             document.body.appendChild(link);
             link.click();
