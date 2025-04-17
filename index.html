@@ -109,11 +109,119 @@
                         </div>
                     </div>
                 </div>
-                <div class="rectangle"></div>
+                <div class="rectangle">
+                    <div class="tabs">
+                        <button class="tab-btn active" data-tab="observacion">Observacion (hoy)</button>
+                        <button class="tab-btn" data-tab="prescripcion">Prescripcion</button>
+                        <button class="tab-btn" data-tab="incapacidad">Incapacidad</button>
+                        <button class="tab-btn" data-tab="referencia">Referencia</button>
+                    </div>
+                    <div class="tab-content">
+                        <div class="tab-pane active" id="observacion">
+                            <!-- Observacion content will go here -->
+                        </div>
+                        <div class="tab-pane" id="prescripcion">
+                            <div class="prescription-form">
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label>Medicamento</label>
+                                        <div class="select-wrapper">
+                                            <select>
+                                                <option value="" disabled selected></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Dosis</label>
+                                        <div class="select-wrapper">
+                                            <select>
+                                                <option value="" disabled selected></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Frecuencia</label>
+                                        <div class="select-wrapper">
+                                            <select>
+                                                <option value="" disabled selected></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <label>Refill</label>
+                                        <div class="select-wrapper">
+                                            <select>
+                                                <option value="" disabled selected></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-footer">
+                                    <div class="expiration-date">
+                                        <label>Fecha de Expiración:</label>
+                                        <div class="date-input">
+                                            <input type="text" maxlength="2" placeholder="__">
+                                            <span>/</span>
+                                            <input type="text" maxlength="2" placeholder="__">
+                                            <span>/</span>
+                                            <input type="text" maxlength="4" placeholder="____">
+                                        </div>
+                                    </div>
+                                    <button class="share-btn">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="incapacidad">
+                            <div class="incapacidad-form">
+                                <h2>Puede volver a trabajar el día</h2>
+                                <div class="date-input-large">
+                                    <input type="text" maxlength="2" placeholder="__">
+                                    <span>/</span>
+                                    <input type="text" maxlength="2" placeholder="__">
+                                    <span>/</span>
+                                    <input type="text" maxlength="4" placeholder="____">
+                                </div>
+                                <div class="separator">o</div>
+                                <h2>Tiempo de reposo</h2>
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <div class="select-wrapper">
+                                            <select>
+                                                <option value="" disabled selected></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="form-group">
+                                        <div class="select-wrapper">
+                                            <select>
+                                                <option value="" disabled selected></option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="form-footer">
+                                    <div></div>
+                                    <button class="share-btn">
+                                        <svg viewBox="0 0 24 24" width="24" height="24">
+                                            <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tab-pane" id="referencia">
+                            <!-- Referencia content will go here -->
+                        </div>
+                    </div>
+                </div>
             </div>
         </section>
     </main>
 
-    <!-- <script src="script.js"></script> -->
+    <script src="script.js"></script>
 </body>
 </html> 

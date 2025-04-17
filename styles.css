@@ -110,7 +110,7 @@ nav {
     height: 325px;
     background-color: var(--secondary);
     border-radius: 20px;
-    padding: 20px;
+    padding: 15px 0 10px 0;
     display: flex;
     flex-direction: column;
     overflow-y: auto;
@@ -329,6 +329,187 @@ nav {
     color: var(--text);
 }
 
+/* Tabs Styles */
+.tabs {
+    display: flex;
+    gap: 0.5rem;
+    margin-bottom: 0;
+    padding: 0 1rem;
+}
+
+.tab-btn {
+    flex: 1;
+    padding: 0.5rem 1rem;
+    border: none;
+    background: none;
+    border-radius: 10px 10px 0 0;
+    font-size: 0.9rem;
+    color: var(--text);
+    cursor: pointer;
+    transition: all 0.2s ease;
+    text-align: center;
+    white-space: nowrap;
+    min-width: 0;
+}
+
+.tab-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+}
+
+.tab-btn.active {
+    background-color: white;
+    border-bottom: none;
+}
+
+/* Prescription Form Styles */
+.prescription-form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    height: 100%;
+    position: relative;
+}
+
+.form-row {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1rem;
+}
+
+.form-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.form-group label {
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.select-wrapper {
+    position: relative;
+    width: 100%;
+}
+
+.select-wrapper select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    appearance: none;
+    background-color: white;
+    font-size: 0.9rem;
+    cursor: pointer;
+}
+
+.select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 0.8rem;
+    color: var(--text);
+}
+
+.form-footer {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    padding: 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.expiration-date {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.expiration-date label {
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.date-input {
+    display: flex;
+    align-items: center;
+    gap: 0.2rem;
+    font-size: 0.9rem;
+    color: var(--text);
+}
+
+.date-input input {
+    width: 30px;
+    border: none;
+    border-bottom: 2px solid var(--text);
+    text-align: center;
+    font-size: 0.9rem;
+    color: var(--text);
+    background: transparent;
+}
+
+.date-input input:last-child {
+    width: 50px;
+}
+
+.date-input input:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+}
+
+.date-input span {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.share-btn {
+    background: none;
+    border: none;
+    cursor: pointer;
+    padding: 0.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--text);
+}
+
+.share-btn:hover {
+    background-color: rgba(0, 0, 0, 0.05);
+    border-radius: 50%;
+}
+
+/* Tab Content Styles */
+.tab-content {
+    position: relative;
+    background-color: var(--secondary);
+    height: calc(100% - 40px);
+    overflow: hidden;
+}
+
+.tab-pane {
+    display: none;
+    height: 100%;
+    background-color: var(--secondary);
+    overflow-y: auto;
+}
+
+.tab-pane.active {
+    margin-left: 0.5rem;
+    margin-right: 0.5rem;
+    display: block;
+    background-color: white;
+    height: 100%;
+    border-radius: 10px;
+    padding: 1rem;
+    position: relative;
+}
+
 /* Responsive Design */
 @media (max-width: 768px) {
     .nav-links {
@@ -387,4 +568,111 @@ nav {
     .medications-procedures {
         padding-right: 0;
     }
+
+    .form-row {
+        grid-template-columns: 1fr;
+    }
+    
+    .tabs {
+        flex-wrap: wrap;
+    }
 } 
+
+/* Incapacidad Form Styles */
+.incapacidad-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-height: 100%;
+    overflow-y: auto;
+    position: relative;
+    height: 100%;
+}
+
+.incapacidad-form h2 {
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: var(--text);
+    text-align: center;
+}
+
+.date-input-large {
+    display: flex;
+    align-items: center;
+    gap: 0.3rem;
+    font-size: 1.8rem;
+    color: var(--text);
+    justify-content: center;
+}
+
+.date-input-large input {
+    width: 45px;
+    border: none;
+    border-bottom: 2px solid var(--text);
+    text-align: center;
+    font-size: 1.8rem;
+    color: var(--text);
+    background: transparent;
+    padding: 2px 0;
+}
+
+.date-input-large input:last-child {
+    width: 80px;
+}
+
+.date-input-large input:focus {
+    outline: none;
+    border-bottom-color: var(--accent);
+}
+
+.date-input-large span {
+    color: var(--text);
+    font-weight: 500;
+}
+
+.separator {
+    font-size: 1.2rem;
+    color: var(--text);
+    text-align: center;
+}
+
+.incapacidad-form .form-row {
+    display: flex;
+    gap: 0.5rem;
+    justify-content: center;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+}
+
+.incapacidad-form .form-group {
+    width: 120px;
+}
+
+.incapacidad-form .select-wrapper select {
+    width: 100%;
+    padding: 0.5rem;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    appearance: none;
+    background-color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    text-align: center;
+}
+
+.incapacidad-form .select-wrapper::after {
+    content: "▼";
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    pointer-events: none;
+    font-size: 0.8rem;
+    color: var(--text);
+}
+
+@media (max-width: 768px) {
+    .incapacidad-form .form-group {
+        width: 100px;
+    }
+}
