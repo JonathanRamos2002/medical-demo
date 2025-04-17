@@ -642,10 +642,16 @@ nav {
     justify-content: center;
     margin-top: 1rem;
     margin-bottom: 2rem;
+    position: relative;
+    z-index: 2;
 }
 
 .incapacidad-form .form-group {
     width: 120px;
+}
+
+.incapacidad-form .select-wrapper {
+    position: relative;
 }
 
 .incapacidad-form .select-wrapper select {
@@ -658,6 +664,8 @@ nav {
     font-size: 1rem;
     cursor: pointer;
     text-align: center;
+    position: relative;
+    z-index: 2;
 }
 
 .incapacidad-form .select-wrapper::after {
@@ -669,6 +677,7 @@ nav {
     pointer-events: none;
     font-size: 0.8rem;
     color: var(--text);
+    z-index: 2;
 }
 
 @media (max-width: 768px) {
@@ -749,7 +758,6 @@ nav {
 }
 
 .signature-area {
-    flex: 1;
     margin-top: 2rem;
     position: relative;
     border: 1px solid #ddd;
@@ -758,6 +766,7 @@ nav {
     margin-bottom: 1rem;
     min-height: 100px;
     display: flex;
+    z-index: 1;
 }
 
 #signatureCanvas {
