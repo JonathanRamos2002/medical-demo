@@ -2,6 +2,19 @@ document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('.tab-btn');
     const tabPanes = document.querySelectorAll('.tab-pane');
 
+    // Download handler
+    const downloadIcon = document.querySelector('.download-icon');
+    if (downloadIcon) {
+        downloadIcon.addEventListener('click', function() {
+            const link = document.createElement('a');
+            link.href = 'example.txt';
+            link.download = 'example.txt';
+            document.body.appendChild(link);
+            link.click();
+            document.body.removeChild(link);
+        });
+    }
+
     tabs.forEach(tab => {
         tab.addEventListener('click', () => {
             // Remove active class from all tabs and panes
