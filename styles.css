@@ -12,6 +12,7 @@
     --status-high: #ff4d4d;
     --status-elevated: #ffd700;
     --status-normal: #4CAF50;
+    --signature-background: #f2f2fa;
 } 
 
 /* Reset and base styles */
@@ -692,7 +693,6 @@ nav {
     flex-direction: column;
     height: 100%;
     position: relative;
-    padding: 1rem;
 }
 
 .specialty-field {
@@ -758,13 +758,11 @@ nav {
 }
 
 .signature-area {
-    margin-top: 2rem;
+    margin-top: 1rem;
     position: relative;
-    border: 1px solid #ddd;
     border-radius: 10px;
-    background-color: white;
-    margin-bottom: 1rem;
-    min-height: 100px;
+    background-color: var(--signature-background);
+    min-height: 170px;
     display: flex;
     z-index: 1;
 }
@@ -782,6 +780,6 @@ nav {
 
 .signature-area .action-buttons {
     position: absolute;
-    bottom: 1rem;
-    right: 1rem;
+    bottom: 0.1rem;
+    right: 0.1rem;
 }
