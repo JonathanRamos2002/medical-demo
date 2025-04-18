@@ -54,6 +54,22 @@ nav {
     color: var(--background);
 }
 
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--background);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--info);
+}
 
 /* Main Content Section */
 .main-content {
