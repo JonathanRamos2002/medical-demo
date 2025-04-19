@@ -1,0 +1,453 @@
+:root {
+    --primary: #4c4c50;
+    --secondary: rgb(238, 238, 238);
+    --accent: #3D5A80;
+    --background: #FFFFFF;
+    --text: #181722;
+    --error: #E63946;
+    --warning: #F4A261;
+    --success: #6A994E;
+    --info: #3498db;
+    --shadow: rgba(0, 0, 0, 0.2);
+    --status-high: #ff4d4d;
+    --status-elevated: #ffd700;
+    --status-normal: #4CAF50;
+    --timeline-line: #e0e0e0;
+}
+
+/* Reset and base styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    line-height: 1.6;
+    color: var(--text);
+    background-color: var(--secondary);
+}
+
+/* Header and Navigation */
+header {
+    background-color: var(--primary);
+    box-shadow: 0 2px 5px var(--shadow);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+    color: var(--background);
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 2rem;
+}
+
+.nav-links a {
+    color: var(--background);
+    text-decoration: none;
+    font-weight: 500;
+    transition: color 0.3s ease;
+}
+
+.nav-links a:hover {
+    color: var(--info);
+}
+
+/* Main Content Section */
+.main-content {
+    padding: 80px 5% 2%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.history-container {
+    background-color: var(--secondary);
+    border-radius: 20px;
+    padding: 2rem;
+    position: relative;
+}
+
+/* Patient Header */
+.patient-header {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 0rem;
+    padding-bottom: 1rem;
+    border-bottom: 1px solid var(--timeline-line);
+}
+
+.patient-photo {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.patient-photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.patient-info {
+    flex: 1;
+}
+
+.patient-info h1 {
+    font-size: 2rem;
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.patient-info p {
+    color: var(--text);
+}
+
+/* Conditions */
+.conditions {
+    display: flex;
+    gap: 1rem;
+    margin: 0.5rem 0;
+}
+
+.condition {
+    padding: 0.4rem 1rem;
+    border-radius: 20px;
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: white;
+}
+
+.condition.red {
+    background-color: var(--status-high);
+}
+
+.condition.yellow {
+    background-color: var(--status-elevated);
+}
+
+/* Allergies */
+.allergies {
+    margin-top: 1rem;
+}
+
+.allergies h3 {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.allergy-groups {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+}
+
+.allergy-type {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+}
+
+.allergy-label {
+    margin-left: 2rem;
+    font-weight: 600;
+}
+
+.allergy-item {
+    color: white;
+    background-color: var(--status-elevated);
+    padding: 0.2rem 0.8rem;
+    border-radius: 15px;
+    font-size: 0.9rem;
+}
+
+.allergy-item.severe,
+.allergy-type:nth-child(2) .allergy-item {
+    background-color: var(--status-high);
+    color: white;
+}
+
+/* Info Row */
+.info-row {
+    display: flex;
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+/* Next Appointment */
+.next-appointment {
+    background-color: var(--background);
+    padding: 1.5rem;
+    border-radius: 15px;
+    flex: 1;
+}
+
+.next-appointment h2 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+.appointment-time {
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.appointment-location, .appointment-phone {
+    color: var(--text);
+    opacity: 0.8;
+}
+
+/* Prescriptions Pending */
+.prescriptions-pending {
+    background-color: var(--background);
+    padding: 1.5rem;
+    border-radius: 15px;
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.prescriptions-pending h2 {
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+}
+
+.prescription-count {
+    font-size: 2.5rem;
+    font-weight: bold;
+    color: var(--status-high);
+    text-align: center;
+}
+
+/* Medical Timeline */
+.medical-timeline {
+    position: relative;
+    padding-left: 2rem;
+}
+
+.timeline-item {
+    position: relative;
+    padding-bottom: 2rem;
+    padding-left: 2.5rem;
+    border-left: 2px solid var(--accent);
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    left: -0.65rem;
+    top: 0;
+    width: 1rem;
+    height: 1rem;
+    background-color: var(--secondary);
+    border: 2px solid var(--accent);
+    border-radius: 50%;
+}
+
+.timeline-date {
+    font-size: 0.9rem;
+    color: var(--text);
+    opacity: 0.7;
+    margin-bottom: 0.5rem;
+}
+
+.timeline-content {
+    background-color: var(--background);
+    padding: 1.5rem;
+    border-radius: 15px;
+}
+
+.timeline-content h3 {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.download-icon {
+    cursor: pointer;
+    opacity: 0.7;
+    transition: opacity 0.3s ease;
+}
+
+.download-icon:hover {
+    opacity: 1;
+}
+
+.timeline-content p {
+    margin-bottom: 1rem;
+}
+
+.timeline-content p:last-child {
+    margin-bottom: 0;
+}
+
+.see-more {
+    color: var(--info);
+    text-decoration: none;
+    font-size: 0.9rem;
+    display: inline-block;
+    margin-top: 1rem;
+}
+
+/* Add Record Button */
+.add-record-btn {
+    position: fixed;
+    bottom: 2rem;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 3.5rem;
+    height: 3.5rem;
+    border-radius: 50%;
+    background-color: var(--accent);
+    border: none;
+    color: white;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 10px var(--shadow);
+    transition: transform 0.3s ease, opacity 0.3s ease;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.add-record-btn.visible {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.add-record-btn:hover {
+    transform: translateX(-50%) scale(1.1);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .nav-links {
+        gap: 1rem;
+    }
+    
+    .main-content {
+        padding: 80px 3% 2%;
+    }
+    
+    .history-container {
+        padding: 1rem;
+    }
+
+    .patient-header {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        gap: 1rem;
+    }
+
+    .conditions {
+        justify-content: center;
+    }
+
+    .allergy-groups {
+        text-align: left;
+    }
+
+    .timeline-item {
+        padding-left: 1rem;
+    }
+
+    .timeline-content {
+        padding: 1rem;
+    }
+
+    .info-row {
+        flex-direction: column;
+    }
+    
+    .next-appointment, .prescriptions-pending {
+        width: 100%;
+    }
+    
+    .prescriptions-pending {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+    
+    .prescriptions-pending h2 {
+        margin-bottom: 0;
+    }
+}
+
+.procedure-type {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-top: 0.5rem;
+}
+
+.procedure-type .allergy-label {
+    margin-left: 0;
+} 
+
+.procedure-type .allergy-item {
+    background-color: var(--accent);
+    color: white;
+}
+
+.timeline-title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+}
+
+.edit-title {
+    outline: none;
+    color: var(--text);
+    font-weight: bold;
+    min-width: 100px;
+}
+
+.edit-placeholder {
+    outline: none;
+    color: var(--text);
+    min-height: 80px;
+}
+
+.timeline-item:first-child {
+    animation: fadeIn 0.4s ease-out;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
