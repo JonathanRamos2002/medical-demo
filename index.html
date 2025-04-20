@@ -7,247 +7,135 @@
     <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div class="logo">ISBM - Cita Virtual</div>
-            <ul class="nav-links">
-                <li><a href="prescription.html">Prescripción</a></li>
-            </ul>
+    <div class="side-menu">
+        <nav class="menu-items">
+            <a href="#" class="menu-item active">Hogar</a>
+            <a href="#" class="menu-item">Pacientes</a>
+            <a href="#" class="menu-item">Prepscripciones</a>
+            <a href="#" class="menu-item">Citas</a>
+            <a href="#" class="menu-item">Videollamadas</a>
+            <a href="#" class="menu-item">Expedientes</a>
+            <a href="#" class="menu-item">Referencias</a>
+            <a href="#" class="menu-item">Alertas</a>
         </nav>
-    </header>
+    </div>
+    <div class="menu-overlay"></div>
+    <div class="content-wrapper">
+        <header>
+            <nav>
+                <div class="logo">ISBM - Cita Virtual</div>
+                <ul class="nav-links">
+                    <li><a href="prescription.html">Prescripción</a></li>
+                </ul>
+            </nav>
+        </header>
 
-    <main>
-        <section class="main-content">
-            <div class="large-square">
-                <div class="square-image">
-                    <img src="media/patient_call.png" alt="Video call placeholder">
-                </div>
-            </div>
-            <div class="rectangles">
-                <div class="rectangle patient-profile">
-                    <div class="profile-header">
-                        <div class="profile-image">
-                            <img src="media/patient_face.png" alt="Patient photo">
-                        </div>
-                        <div class="profile-info">
-                            <h2>Maria Luisa Gonzalez</h2>
-                            <p class="patient-details">Femenina, 31 anos, 137 Lb</p>
-                            <a href="history.html" class="medical-history">Historial Medico Completo</a>
-                            <div class="conditions">
-                                <span class="condition red">Hipertensión Etapa 1</span>
-                                <span class="condition yellow">Pre - Diabetes</span>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="medical-data">
-                        <div class="lab-results">
-                            <div class="section-header">
-                                <h3>Resultados de Laboratorio</h3>
-                                <span class="date">(Abril 14, 2025)</span>
-                                <span class="download-icon">↓</span>
-                            </div>
-                            <div class="results-grid">
-                                <div class="result-item">
-                                    <span class="label">Temperatura Corporal</span>
-                                    <span class="value">38.2 °C</span>
-                                    <span class="status high">Alta</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="label">Glocosa en Ayunas</span>
-                                    <span class="value">6.3 mmol/L</span>
-                                    <span class="status elevated">Elevado</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="label">Presion Arterial</span>
-                                    <span class="value">145/92 mmHg</span>
-                                    <span class="status high">Alta</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="label">Colesterol Total</span>
-                                    <span class="value">4.8 mmol/L</span>
-                                    <span class="status normal">Normal</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="label">Examen general de orina</span>
-                                    <span class="value">P negativas, pH 6.0</span>
-                                    <span class="status normal">Normal</span>
-                                </div>
-                                <div class="result-item">
-                                    <span class="label">Triglicéridos</span>
-                                    <span class="value">1.4 mmol/L</span>
-                                    <span class="status normal">Normal</span>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="medications-procedures">
-                            <div class="medications">
-                                <h3>Medicamentos</h3>
-                                <div class="med-list">
-                                    <div class="med-item">
-                                        <span class="med-name">Losartán potásico 50 mg</span>
-                                        <span class="med-dose">1 Diaria</span>
-                                    </div>
-                                    <div class="med-item">
-                                        <span class="med-name">Metformina 500 mg</span>
-                                        <span class="med-dose">1 despues cenar</span>
-                                    </div>
-                                    <div class="med-item">
-                                        <span class="med-name">Omega 3 (EPA/DHA)</span>
-                                        <span class="med-dose">1 Diaria</span>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="last-procedure">
-                                <h3>Ultimo Procedimiento</h3>
-                                <div class="procedure-info">
-                                    <span class="procedure-name">Cesárea (C-section)</span>
-                                    <span class="procedure-date">17 de marzo de 2024</span>
-                                </div>
-                            </div>
-                        </div>
+        <main>
+            <section class="main-content">
+                <div class="large-square">
+                    <div class="square-image">
+                        <img src="media/patient_call.png" alt="Video call placeholder">
                     </div>
                 </div>
-                <div class="rectangle">
-                    <div class="tabs">
-                        <button class="tab-btn active" data-tab="observacion">Observacion (hoy)</button>
-                        <button class="tab-btn" data-tab="prescripcion">Prescripcion</button>
-                        <button class="tab-btn" data-tab="incapacidad">Incapacidad</button>
-                        <button class="tab-btn" data-tab="referencia">Referencia</button>
+                <div class="rectangles">
+                    <div class="rectangle patient-profile">
+                        <div class="profile-header">
+                            <div class="profile-image">
+                                <img src="media/patient_face.png" alt="Patient photo">
+                            </div>
+                            <div class="profile-info">
+                                <h2>Maria Luisa Gonzalez</h2>
+                                <p class="patient-details">Femenina, 31 anos, 137 Lb</p>
+                                <a href="history.html" class="medical-history">Historial Medico Completo</a>
+                                <div class="conditions">
+                                    <span class="condition red">Hipertensión Etapa 1</span>
+                                    <span class="condition yellow">Pre - Diabetes</span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="medical-data">
+                            <div class="lab-results">
+                                <div class="section-header">
+                                    <h3>Resultados de Laboratorio</h3>
+                                    <span class="date">(Abril 14, 2025)</span>
+                                    <span class="download-icon">↓</span>
+                                </div>
+                                <div class="results-grid">
+                                    <div class="result-item">
+                                        <span class="label">Temperatura Corporal</span>
+                                        <span class="value">38.2 °C</span>
+                                        <span class="status high">Alta</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Glocosa en Ayunas</span>
+                                        <span class="value">6.3 mmol/L</span>
+                                        <span class="status elevated">Elevado</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Presion Arterial</span>
+                                        <span class="value">145/92 mmHg</span>
+                                        <span class="status high">Alta</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Colesterol Total</span>
+                                        <span class="value">4.8 mmol/L</span>
+                                        <span class="status normal">Normal</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Examen general de orina</span>
+                                        <span class="value">P negativas, pH 6.0</span>
+                                        <span class="status normal">Normal</span>
+                                    </div>
+                                    <div class="result-item">
+                                        <span class="label">Triglicéridos</span>
+                                        <span class="value">1.4 mmol/L</span>
+                                        <span class="status normal">Normal</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="medications-procedures">
+                                <div class="medications">
+                                    <h3>Medicamentos</h3>
+                                    <div class="med-list">
+                                        <div class="med-item">
+                                            <span class="med-name">Losartán potásico 50 mg</span>
+                                            <span class="med-dose">1 Diaria</span>
+                                        </div>
+                                        <div class="med-item">
+                                            <span class="med-name">Metformina 500 mg</span>
+                                            <span class="med-dose">1 despues cenar</span>
+                                        </div>
+                                        <div class="med-item">
+                                            <span class="med-name">Omega 3 (EPA/DHA)</span>
+                                            <span class="med-dose">1 Diaria</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="last-procedure">
+                                    <h3>Ultimo Procedimiento</h3>
+                                    <div class="procedure-info">
+                                        <span class="procedure-name">Cesárea (C-section)</span>
+                                        <span class="procedure-date">17 de marzo de 2024</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
                     </div>
-                    <div class="tab-content">
-                        <div class="tab-pane active" id="observacion">
-                            <div class="observacion-form">
-                                <div class="text-area-wrapper">
-                                    <textarea placeholder="Observaciones..."></textarea>
-                                </div>
-                                <div class="form-footer">
-                                    <div></div>
-                                    <button class="share-btn">
-                                        <svg viewBox="0 0 24 24" width="24" height="24">
-                                            <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
+                    <div class="rectangle">
+                        <div class="tabs">
+                            <button class="tab-btn active" data-tab="observacion">Observacion (hoy)</button>
+                            <button class="tab-btn" data-tab="prescripcion">Prescripcion</button>
+                            <button class="tab-btn" data-tab="incapacidad">Incapacidad</button>
+                            <button class="tab-btn" data-tab="referencia">Referencia</button>
                         </div>
-                        <div class="tab-pane" id="prescripcion">
-                            <div class="prescription-form">
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <label>Medicamento</label>
-                                        <div class="select-wrapper">
-                                            <select>
-                                                <option value="" disabled selected></option>
-                                            </select>
-                                        </div>
+                        <div class="tab-content">
+                            <div class="tab-pane active" id="observacion">
+                                <div class="observacion-form">
+                                    <div class="text-area-wrapper">
+                                        <textarea placeholder="Observaciones..."></textarea>
                                     </div>
-                                    <div class="form-group">
-                                        <label>Dosis</label>
-                                        <div class="select-wrapper">
-                                            <select>
-                                                <option value="" disabled selected></option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Frecuencia</label>
-                                        <div class="select-wrapper">
-                                            <select>
-                                                <option value="" disabled selected></option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <label>Refill</label>
-                                        <div class="select-wrapper">
-                                            <select>
-                                                <option value="" disabled selected></option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-footer">
-                                    <div class="expiration-date">
-                                        <label>Fecha de Expiración:</label>
-                                        <div class="date-input">
-                                            <input type="text" maxlength="2" placeholder="__">
-                                            <span>/</span>
-                                            <input type="text" maxlength="2" placeholder="__">
-                                            <span>/</span>
-                                            <input type="text" maxlength="4" placeholder="____">
-                                        </div>
-                                    </div>
-                                    <button class="share-btn">
-                                        <svg viewBox="0 0 24 24" width="24" height="24">
-                                            <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="incapacidad">
-                            <div class="incapacidad-form">
-                                <h2>Puede volver a trabajar el día</h2>
-                                <div class="date-input-large">
-                                    <input type="text" maxlength="2" placeholder="__">
-                                    <span>/</span>
-                                    <input type="text" maxlength="2" placeholder="__">
-                                    <span>/</span>
-                                    <input type="text" maxlength="4" placeholder="____">
-                                </div>
-                                <div class="separator">o</div>
-                                <h2>Tiempo de reposo</h2>
-                                <div class="form-row">
-                                    <div class="form-group">
-                                        <div class="select-wrapper">
-                                            <select>
-                                                <option value="" disabled selected></option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                    <div class="form-group">
-                                        <div class="select-wrapper">
-                                            <select>
-                                                <option value="" disabled selected></option>
-                                            </select>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-footer">
-                                    <div></div>
-                                    <button class="share-btn">
-                                        <svg viewBox="0 0 24 24" width="24" height="24">
-                                            <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
-                                        </svg>
-                                    </button>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="tab-pane" id="referencia">
-                            <div class="referencia-form">
-                                <div class="specialty-field">
-                                    <label>Especialidad:</label>
-                                    <div class="select-wrapper">
-                                        <select>
-                                            <option value="" disabled selected></option>
-                                            <option value="cardiologia">Cardiología</option>
-                                            <option value="dermatologia">Dermatología</option>
-                                            <option value="endocrinologia">Endocrinología</option>
-                                            <option value="gastroenterologia">Gastroenterología</option>
-                                            <option value="neurologia">Neurología</option>
-                                            <option value="oftalmologia">Oftalmología</option>
-                                            <option value="traumatologia">Traumatología</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="signature-area">
-                                    <canvas id="signatureCanvas"></canvas>
-                                    <div class="action-buttons">
-                                        <button class="upload-btn">
-                                            <svg viewBox="0 0 24 24" width="24" height="24">
-                                                <path d="M12 20V4M5 11l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"/>
-                                            </svg>
-                                        </button>
+                                    <div class="form-footer">
+                                        <div></div>
                                         <button class="share-btn">
                                             <svg viewBox="0 0 24 24" width="24" height="24">
                                                 <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
@@ -256,12 +144,139 @@
                                     </div>
                                 </div>
                             </div>
+                            <div class="tab-pane" id="prescripcion">
+                                <div class="prescription-form">
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <label>Medicamento</label>
+                                            <div class="select-wrapper">
+                                                <select>
+                                                    <option value="" disabled selected></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Dosis</label>
+                                            <div class="select-wrapper">
+                                                <select>
+                                                    <option value="" disabled selected></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Frecuencia</label>
+                                            <div class="select-wrapper">
+                                                <select>
+                                                    <option value="" disabled selected></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <label>Refill</label>
+                                            <div class="select-wrapper">
+                                                <select>
+                                                    <option value="" disabled selected></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-footer">
+                                        <div class="expiration-date">
+                                            <label>Fecha de Expiración:</label>
+                                            <div class="date-input">
+                                                <input type="text" maxlength="2" placeholder="__">
+                                                <span>/</span>
+                                                <input type="text" maxlength="2" placeholder="__">
+                                                <span>/</span>
+                                                <input type="text" maxlength="4" placeholder="____">
+                                            </div>
+                                        </div>
+                                        <button class="share-btn">
+                                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                                <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="incapacidad">
+                                <div class="incapacidad-form">
+                                    <h2>Puede volver a trabajar el día</h2>
+                                    <div class="date-input-large">
+                                        <input type="text" maxlength="2" placeholder="__">
+                                        <span>/</span>
+                                        <input type="text" maxlength="2" placeholder="__">
+                                        <span>/</span>
+                                        <input type="text" maxlength="4" placeholder="____">
+                                    </div>
+                                    <div class="separator">o</div>
+                                    <h2>Tiempo de reposo</h2>
+                                    <div class="form-row">
+                                        <div class="form-group">
+                                            <div class="select-wrapper">
+                                                <select>
+                                                    <option value="" disabled selected></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <div class="select-wrapper">
+                                                <select>
+                                                    <option value="" disabled selected></option>
+                                                </select>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="form-footer">
+                                        <div></div>
+                                        <button class="share-btn">
+                                            <svg viewBox="0 0 24 24" width="24" height="24">
+                                                <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="tab-pane" id="referencia">
+                                <div class="referencia-form">
+                                    <div class="specialty-field">
+                                        <label>Especialidad:</label>
+                                        <div class="select-wrapper">
+                                            <select>
+                                                <option value="" disabled selected></option>
+                                                <option value="cardiologia">Cardiología</option>
+                                                <option value="dermatologia">Dermatología</option>
+                                                <option value="endocrinologia">Endocrinología</option>
+                                                <option value="gastroenterologia">Gastroenterología</option>
+                                                <option value="neurologia">Neurología</option>
+                                                <option value="oftalmologia">Oftalmología</option>
+                                                <option value="traumatologia">Traumatología</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                    <div class="signature-area">
+                                        <canvas id="signatureCanvas"></canvas>
+                                        <div class="action-buttons">
+                                            <button class="upload-btn">
+                                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                                    <path d="M12 20V4M5 11l7-7 7 7" fill="none" stroke="currentColor" stroke-width="2"/>
+                                                </svg>
+                                            </button>
+                                            <button class="share-btn">
+                                                <svg viewBox="0 0 24 24" width="24" height="24">
+                                                    <path d="M13 5l7 7-7 7M4 12h16" fill="none" stroke="currentColor" stroke-width="2"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
-            </div>
-        </section>
-    </main>
+            </section>
+        </main>
+    </div>
 
     <script src="script.js"></script>
 </body>

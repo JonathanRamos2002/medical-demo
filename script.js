@@ -1,3 +1,53 @@
+// Add menu toggle button to the DOM
+const menuToggleButton = document.createElement('button');
+menuToggleButton.className = 'menu-toggle';
+menuToggleButton.innerHTML = `
+    <svg viewBox="0 0 24 24">
+        <path d="M3 12h18M3 6h18M3 18h18" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </svg>
+`;
+document.body.appendChild(menuToggleButton);
+
+// Menu functionality
+const sideMenu = document.querySelector('.side-menu');
+const menuOverlay = document.querySelector('.menu-overlay');
+const contentWrapper = document.querySelector('.content-wrapper');
+const header = document.querySelector('header');
+
+function toggleMenu() {
+    sideMenu.classList.toggle('active');
+    menuOverlay.classList.toggle('active');
+    contentWrapper.classList.toggle('menu-active');
+    header.classList.toggle('menu-active');
+}
+
+// Event listeners
+menuToggleButton.addEventListener('click', toggleMenu);
+menuOverlay.addEventListener('click', toggleMenu);
+
+// Close menu with Escape key
+document.addEventListener('keydown', (e) => {
+    if (e.key === 'Escape' && sideMenu.classList.contains('active')) {
+        toggleMenu();
+    }
+});
+
+// Handle menu item clicks
+const menuItems = document.querySelectorAll('.menu-item');
+menuItems.forEach(item => {
+    item.addEventListener('click', () => {
+        // Remove active class from all items
+        menuItems.forEach(i => i.classList.remove('active'));
+        // Add active class to clicked item
+        item.classList.add('active');
+        
+        // On mobile or tablet, close menu after selection
+        if (window.innerWidth < 1024) {
+            toggleMenu();
+        }
+    });
+});
+
 document.addEventListener('DOMContentLoaded', function() {
     const tabs = document.querySelectorAll('.tab-btn');
     const tabPanes = document.querySelectorAll('.tab-pane');
